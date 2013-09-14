@@ -80,8 +80,8 @@ def facebook_authorized(resp):
 def logout():
 
 
-    fb_logout= "https://www.facebook.com/logout.php?next=" + url_for('index') + "&access_token=" + get_facebook_token()[0]
-
+    #fb_logout= "https://www.facebook.com/logout.php?next=" + url_for('index') + "&access_token=" + get_facebook_token()[0]
+    fb_logout= "https://www.facebook.com/logout.php?next=http://calm-island-3785.herokuapp.com/"  + "&access_token=" + get_facebook_token()[0]
     pop_login_session()
     print fb_logout
     return redirect(fb_logout)
